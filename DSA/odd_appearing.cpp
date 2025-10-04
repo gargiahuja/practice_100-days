@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+void odd_appearing(int arr[],int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        int count=0;
+        for(int j=0;j<n;j++)
+        {
+            if(arr[i]==arr[j])
+            {
+                count++;
+            }
+           
+        }
+         if(count%2!=0)
+            {
+                cout<<arr[i]<<endl;
+            }
+    }
+}
+int main()
+{
+    int arr[]={3,4,3,4,5,4,4,6,7,7};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    odd_appearing(arr,n);
+    return 0;
+}
